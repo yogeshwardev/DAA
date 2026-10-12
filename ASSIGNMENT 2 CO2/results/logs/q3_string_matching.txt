@@ -1,0 +1,39 @@
+==========================================================================
+Date/Time: 12-10-2026 22:27:47
+Q3 - BRUTE-FORCE STRING MATCHING
+==========================================================================
+PREDICTIONS (made before running)
+  test 1: first character mismatches at every alignment -> n - m + 1 comparisons
+  test 2: m - 1 characters match at every alignment, last one fails -> m (n - m + 1) comparisons
+  test 3: character frequencies of the text give 1.034 comparisons per alignment -> about 10318
+  test 4: each letter has probability 1/4 -> 1.332 per alignment -> about 13304
+
+test                                           n     m   predicted    observed  found at
+1 low work: no pattern letter in text      10000    10        9991        9991        -1
+2 engineered worst case                    10000    10       99910       99910        -1
+3 log-style text and absent signature      10000    21       10318       10622        -1
+4 DNA-like alphabet (4 letters)            10000    11       13304       13254        -1
+
+EFFECT OF TEXT LENGTH (engineered worst case, m = 10)
+  n =   1000  observed     9910   predicted m(n-m+1) =     9910
+  n =  10000  observed    99910   predicted m(n-m+1) =    99910
+  n = 100000  observed   999910   predicted m(n-m+1) =   999910
+EFFECT OF PATTERN LENGTH (engineered worst case, n = 10000)
+  m =    2  observed    19998   predicted m(n-m+1) =    19998
+  m =    5  observed    49980   predicted m(n-m+1) =    49980
+  m =   10  observed    99910   predicted m(n-m+1) =    99910
+  m =   50  observed   497550   predicted m(n-m+1) =   497550
+  m =  200  observed  1960200   predicted m(n-m+1) =  1960200
+
+CSV,q3,1 low work: no pattern letter in text,10000,10,9991,9991
+CSV,q3,2 engineered worst case,10000,10,99910,99910
+CSV,q3,3 log-style text and absent signature,10000,21,10318,10622
+CSV,q3,4 DNA-like alphabet (4 letters),10000,11,13304,13254
+CSV,q3n,1000,10,9910,9910
+CSV,q3n,10000,10,99910,99910
+CSV,q3n,100000,10,999910,999910
+CSV,q3m,10000,2,19998,19998
+CSV,q3m,10000,5,49980,49980
+CSV,q3m,10000,10,99910,99910
+CSV,q3m,10000,50,497550,497550
+CSV,q3m,10000,200,1960200,1960200

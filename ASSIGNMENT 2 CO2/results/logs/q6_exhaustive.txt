@@ -1,0 +1,72 @@
+==========================================================================
+Date/Time: 12-10-2026 22:28:01
+Q6 - EXHAUSTIVE SEARCH (HELICOPTER PAYLOAD)
+==========================================================================
+Verification instance, capacity 10 kg
+  P1 weight 7 value 42
+  P2 weight 3 value 12
+  P3 weight 4 value 40
+  P4 weight 5 value 25
+  P5 weight 2 value 10
+all 32 subsets:
+  subset                  weight   value  feasible
+  {}                           0       0       yes
+  {P1}                         7      42       yes
+  {P2}                         3      12       yes
+  {P1,P2}                     10      54       yes
+  {P3}                         4      40       yes
+  {P1,P3}                     11      82        no
+  {P2,P3}                      7      52       yes
+  {P1,P2,P3}                  14      94        no
+  {P4}                         5      25       yes
+  {P1,P4}                     12      67        no
+  {P2,P4}                      8      37       yes
+  {P1,P2,P4}                  15      79        no
+  {P3,P4}                      9      65       yes
+  {P1,P3,P4}                  16     107        no
+  {P2,P3,P4}                  12      77        no
+  {P1,P2,P3,P4}               19     119        no
+  {P5}                         2      10       yes
+  {P1,P5}                      9      52       yes
+  {P2,P5}                      5      22       yes
+  {P1,P2,P5}                  12      64        no
+  {P3,P5}                      6      50       yes
+  {P1,P3,P5}                  13      92        no
+  {P2,P3,P5}                   9      62       yes
+  {P1,P2,P3,P5}               16     104        no
+  {P4,P5}                      7      35       yes
+  {P1,P4,P5}                  14      77        no
+  {P2,P4,P5}                  10      47       yes
+  {P1,P2,P4,P5}               17      89        no
+  {P3,P4,P5}                  11      75        no
+  {P1,P3,P4,P5}               18     117        no
+  {P2,P3,P4,P5}               14      87        no
+  {P1,P2,P3,P4,P5}            21     129        no
+exhaustive search: best value 65 with ['P3', 'P4'], feasible subsets 16
+independent check (itertools.combinations): best value 65 -> MATCH
+
+GROWTH (capacity = 40 percent of total weight)
+    n           2^n    candidates      feasible  best value    time (s)
+   10          1024          1024           298         400      0.0022
+   12          4096          4096          1132         390      0.0121
+   14         16384         16384          4027         433      0.0459
+   16         65536         65536         16798         723      0.2283
+   18        262144        262144         60566         673      0.7099
+   20       1048576       1048576        223607         681      3.2712
+   21       2097152       2097152        441304         707      6.6303
+
+time per candidate: 3.16 microseconds
+response time chosen for the planner: 5 s -> largest deployable n about 20 packages
+  predicted time for n = 25 : 106.1 s
+  predicted time for n = 30 : 3394.7 s
+  predicted time for n = 40 : 3476204.5 s
+  predicted time for n = 50 : 112.9 years
+
+CSV,q6,10,1024,1024,298,400,0.0022
+CSV,q6,12,4096,4096,1132,390,0.0121
+CSV,q6,14,16384,16384,4027,433,0.0459
+CSV,q6,16,65536,65536,16798,723,0.2283
+CSV,q6,18,262144,262144,60566,673,0.7099
+CSV,q6,20,1048576,1048576,223607,681,3.2712
+CSV,q6,21,2097152,2097152,441304,707,6.6303
+CSV,q6lim,3.162,20

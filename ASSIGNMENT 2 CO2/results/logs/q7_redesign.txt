@@ -1,0 +1,64 @@
+==========================================================================
+Date/Time: 12-10-2026 22:28:12
+Q7 - REDESIGN OF THE EXHAUSTIVE SEARCH (PRUNED SEARCH)
+==========================================================================
+PREDICTION (made before running): the number of nodes visited will be a very small fraction of 2^n
+on random instances, and the saving will shrink on strongly correlated instances where value is
+almost proportional to weight. If every item has the same value density and the capacity cannot be
+filled exactly, the bound should never be able to cut anything, and the search should lose its advantage.
+
+Instance type: random (capacity = 40 percent of total weight)
+    n    exhaustive   feasibility    feas+bound  best value  t exh (s)   t pruned   same
+   12          4096          3477            87         463      0.009     0.0001   True
+   16         65536         44361           198         550      0.175     0.0001   True
+   20       1048576        644449           208         766      3.002     0.0003   True
+   22       4194304       2588038           501         847     13.470     0.0003   True
+   24      16777216       9262485           200         780          -     0.0002      -
+   28     268435456             -          1308        1064          -     0.0013      -
+   32    4294967296             -          4633        1236          -     0.0026      -
+   36   68719476736             -         23586        1470          -     0.0162      -
+   40 1099511627776             -         16418        1444          -     0.0202      -
+
+Instance type: correlated (capacity = 40 percent of total weight)
+    n    exhaustive   feasibility    feas+bound  best value  t exh (s)   t pruned   same
+   12          4096          3366           259         199      0.005     0.0001   True
+   16         65536         49442           625         275      0.156     0.0004   True
+   20       1048576        688058          2209         341      3.055     0.0020   True
+   22       4194304       2614044           881         372     14.953     0.0009   True
+   24      16777216      10546600          3072         384          -     0.0028      -
+   28     268435456             -         13686         479          -     0.0110      -
+   32    4294967296             -          3627         546          -     0.0032      -
+   36   68719476736             -         78683         602          -     0.0618      -
+   40 1099511627776             -        110185         664          -     0.0853      -
+
+Instance type: equal density and odd capacity (capacity = 40 percent of total weight)
+    n    exhaustive   feasibility    feas+bound  best value  t exh (s)   t pruned   same
+   12          4096          3029          2189         144      0.006     0.0012   True
+   16         65536         37350         16958         188      0.149     0.0157   True
+   20       1048576        587128        313142         218      3.308     0.2665   True
+   22       4194304       1967644        878770         286     14.756     0.7208   True
+   24      16777216       7881821       4004883         260          -     3.3295      -
+
+CSV,q7,random,12,4096,3477,87,463,0.0093,0.00007
+CSV,q7,random,16,65536,44361,198,550,0.1750,0.00013
+CSV,q7,random,20,1048576,644449,208,766,3.0022,0.00028
+CSV,q7,random,22,4194304,2588038,501,847,13.4704,0.00031
+CSV,q7,random,24,16777216,9262485,200,780,,0.00020
+CSV,q7,random,28,268435456,,1308,1064,,0.00129
+CSV,q7,random,32,4294967296,,4633,1236,,0.00258
+CSV,q7,random,36,68719476736,,23586,1470,,0.01618
+CSV,q7,random,40,1099511627776,,16418,1444,,0.02022
+CSV,q7,correlated,12,4096,3366,259,199,0.0054,0.00013
+CSV,q7,correlated,16,65536,49442,625,275,0.1556,0.00036
+CSV,q7,correlated,20,1048576,688058,2209,341,3.0552,0.00199
+CSV,q7,correlated,22,4194304,2614044,881,372,14.9534,0.00086
+CSV,q7,correlated,24,16777216,10546600,3072,384,,0.00276
+CSV,q7,correlated,28,268435456,,13686,479,,0.01101
+CSV,q7,correlated,32,4294967296,,3627,546,,0.00324
+CSV,q7,correlated,36,68719476736,,78683,602,,0.06177
+CSV,q7,correlated,40,1099511627776,,110185,664,,0.08531
+CSV,q7,equal density and odd capacity,12,4096,3029,2189,144,0.0059,0.00117
+CSV,q7,equal density and odd capacity,16,65536,37350,16958,188,0.1491,0.01573
+CSV,q7,equal density and odd capacity,20,1048576,587128,313142,218,3.3082,0.26654
+CSV,q7,equal density and odd capacity,22,4194304,1967644,878770,286,14.7555,0.72080
+CSV,q7,equal density and odd capacity,24,16777216,7881821,4004883,260,,3.32951

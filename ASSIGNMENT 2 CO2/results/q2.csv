@@ -1,0 +1,20 @@
+100,first,1.0
+100,middle,51.0
+100,last,100.0
+100,absent,100.0
+100,mean of 1000 successful,51.5
+1000,first,1.0
+1000,middle,501.0
+1000,last,1000.0
+1000,absent,1000.0
+1000,mean of 1000 successful,507.7
+10000,first,1.0
+10000,middle,5001.0
+10000,last,10000.0
+10000,absent,10000.0
+10000,mean of 1000 successful,5048.1
+100000,first,1.0
+100000,middle,50001.0
+100000,last,100000.0
+100000,absent,100000.0
+100000,mean of 1000 successful,51353.6

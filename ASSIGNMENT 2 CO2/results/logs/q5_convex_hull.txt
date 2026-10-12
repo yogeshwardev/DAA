@@ -1,0 +1,28 @@
+==========================================================================
+Date/Time: 12-10-2026 22:27:55
+Q5 - BRUTE-FORCE CONVEX HULL
+==========================================================================
+Set A: boundary and interior points
+  points given: 36, distinct: 36, orientation tests: 6364, accepted edges: 6
+  hull vertices (counter-clockwise): [(4, 38), (38, 4), (84, 16), (96, 62), (62, 96), (16, 84)]
+Set B: designed (collinear, duplicates)
+  points given: 23, distinct: 21, orientation tests: 1395, accepted edges: 4
+  hull vertices (counter-clockwise): [(0, 0), (20, 0), (20, 20), (0, 20)]
+Set C: all points collinear -> hull vertices: [(0, 0), (7, 14)] (tests 48)
+
+       n       pairs    tests (random)    tests (circle) hull (rand)    time (s)
+      10          45               185               227           6      0.0002
+      20         190              1388              1652           7      0.0010
+      40         780              8972             12102           7      0.0062
+      80        3160             57493             91402          11      0.0379
+     160       12720            468404            707602          11      0.2342
+     320       51040           3236479           5562402          14      1.9039
+
+CSV,q5set,A,36,36,6364,6
+CSV,q5set,B,23,21,1395,4
+CSV,q5,10,45,185,227,6,0.00019
+CSV,q5,20,190,1388,1652,7,0.00100
+CSV,q5,40,780,8972,12102,7,0.00621
+CSV,q5,80,3160,57493,91402,11,0.03793
+CSV,q5,160,12720,468404,707602,11,0.23424
+CSV,q5,320,51040,3236479,5562402,14,1.90395

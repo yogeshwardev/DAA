@@ -1,0 +1,42 @@
+random,2000,Selection sort,1999000,1991,149.060
+random,2000,Bubble sort,1998675,1003185,370.005
+random,2000,Insertion sort,1005176,1003185,200.896
+sorted,2000,Selection sort,1999000,0,132.050
+sorted,2000,Bubble sort,1999,0,0.171
+sorted,2000,Insertion sort,1999,0,0.264
+reversed,2000,Selection sort,1999000,1000,200.135
+reversed,2000,Bubble sort,1999000,1999000,570.626
+reversed,2000,Insertion sort,1999000,1999000,432.485
+nearly sorted 95%,2000,Selection sort,1999000,1989,235.803
+nearly sorted 95%,2000,Bubble sort,1998439,100462,248.185
+nearly sorted 95%,2000,Insertion sort,102461,100462,17.375
+sorted + batch of 20,2000,Selection sort,1999000,1981,199.588
+sorted + batch of 20,2000,Bubble sort,1998829,23604,253.063
+sorted + batch of 20,2000,Insertion sort,25603,23604,5.596
+few distinct scores,2000,Selection sort,1999000,1584,256.801
+few distinct scores,2000,Bubble sort,1919200,815745,377.576
+few distinct scores,2000,Insertion sort,817742,815745,160.748
+nearly sorted 95%,500,Selection sort,124750,472,0
+nearly sorted 95%,500,Bubble sort,123970,6394,0
+nearly sorted 95%,500,Insertion sort,6893,6394,0
+nearly sorted 95%,1000,Selection sort,499500,977,0
+nearly sorted 95%,1000,Bubble sort,498939,20940,0
+nearly sorted 95%,1000,Insertion sort,21939,20940,0
+nearly sorted 95%,2000,Selection sort,1999000,1992,0
+nearly sorted 95%,2000,Bubble sort,1995259,85370,0
+nearly sorted 95%,2000,Insertion sort,87369,85370,0
+nearly sorted 95%,4000,Selection sort,7998000,3969,0
+nearly sorted 95%,4000,Bubble sort,7996347,375013,0
+nearly sorted 95%,4000,Insertion sort,379012,375013,0
+random,500,Selection sort,124750,489,0
+random,500,Bubble sort,124344,61223,0
+random,500,Insertion sort,61717,61223,0
+random,1000,Selection sort,499500,987,0
+random,1000,Bubble sort,499490,261091,0
+random,1000,Insertion sort,262082,261091,0
+random,2000,Selection sort,1999000,1997,0
+random,2000,Bubble sort,1997965,992201,0
+random,2000,Insertion sort,994193,992201,0
+random,4000,Selection sort,7998000,3990,0
+random,4000,Bubble sort,7990619,4028152,0
+random,4000,Insertion sort,4032144,4028152,0

@@ -1,0 +1,102 @@
+==========================================================================
+Date/Time: 12-10-2026 22:27:27
+Q1 - SELECTION, BUBBLE AND INSERTION SORT
+==========================================================================
+n = 2000, seed = 5067
+
+PREDICTIONS (made before running), comparisons / swaps-or-moves:
+  sorted               Selection (1999000, 0); Bubble (1999, 0); Insertion (1999, 0)
+  reversed             Selection (1999000, 1000); Bubble (1999000, 1999000); Insertion (1999000, 1999000)
+  random               Selection (1999000, 1999); Bubble (1999000, 999500); Insertion (999500, 999500)
+  nearly sorted 95%    selection unchanged; bubble needs passes until the last displaced item is placed;
+                       insertion should do far fewer moves than on random data
+
+dataset               algorithm          comparisons   swaps/moves   time(ms)   sorted
+random                Selection sort         1999000          1991     149.06     True
+random                Bubble sort            1998675       1003185     370.01     True
+random                Insertion sort         1005176       1003185     200.90     True
+sorted                Selection sort         1999000             0     132.05     True
+sorted                Bubble sort               1999             0       0.17     True
+sorted                Insertion sort            1999             0       0.26     True
+reversed              Selection sort         1999000          1000     200.14     True
+reversed              Bubble sort            1999000       1999000     570.63     True
+reversed              Insertion sort         1999000       1999000     432.49     True
+nearly sorted 95%     Selection sort         1999000          1989     235.80     True
+nearly sorted 95%     Bubble sort            1998439        100462     248.18     True
+nearly sorted 95%     Insertion sort          102461        100462      17.37     True
+sorted + batch of 20  Selection sort         1999000          1981     199.59     True
+sorted + batch of 20  Bubble sort            1998829         23604     253.06     True
+sorted + batch of 20  Insertion sort           25603         23604       5.60     True
+few distinct scores   Selection sort         1999000          1584     256.80     True
+few distinct scores   Bubble sort            1919200        815745     377.58     True
+few distinct scores   Insertion sort          817742        815745     160.75     True
+
+GROWTH WITH n (nearly sorted 95% and random):
+dataset                      n  algorithm        comparisons   swaps/moves
+nearly sorted 95%          500  Selection sort        124750           472
+nearly sorted 95%          500  Bubble sort           123970          6394
+nearly sorted 95%          500  Insertion sort          6893          6394
+nearly sorted 95%         1000  Selection sort        499500           977
+nearly sorted 95%         1000  Bubble sort           498939         20940
+nearly sorted 95%         1000  Insertion sort         21939         20940
+nearly sorted 95%         2000  Selection sort       1999000          1992
+nearly sorted 95%         2000  Bubble sort          1995259         85370
+nearly sorted 95%         2000  Insertion sort         87369         85370
+nearly sorted 95%         4000  Selection sort       7998000          3969
+nearly sorted 95%         4000  Bubble sort          7996347        375013
+nearly sorted 95%         4000  Insertion sort        379012        375013
+random                     500  Selection sort        124750           489
+random                     500  Bubble sort           124344         61223
+random                     500  Insertion sort         61717         61223
+random                    1000  Selection sort        499500           987
+random                    1000  Bubble sort           499490        261091
+random                    1000  Insertion sort        262082        261091
+random                    2000  Selection sort       1999000          1997
+random                    2000  Bubble sort          1997965        992201
+random                    2000  Insertion sort        994193        992201
+random                    4000  Selection sort       7998000          3990
+random                    4000  Bubble sort          7990619       4028152
+random                    4000  Insertion sort       4032144       4028152
+
+CSV,q1,random,2000,Selection sort,1999000,1991,149.060
+CSV,q1,random,2000,Bubble sort,1998675,1003185,370.005
+CSV,q1,random,2000,Insertion sort,1005176,1003185,200.896
+CSV,q1,sorted,2000,Selection sort,1999000,0,132.050
+CSV,q1,sorted,2000,Bubble sort,1999,0,0.171
+CSV,q1,sorted,2000,Insertion sort,1999,0,0.264
+CSV,q1,reversed,2000,Selection sort,1999000,1000,200.135
+CSV,q1,reversed,2000,Bubble sort,1999000,1999000,570.626
+CSV,q1,reversed,2000,Insertion sort,1999000,1999000,432.485
+CSV,q1,nearly sorted 95%,2000,Selection sort,1999000,1989,235.803
+CSV,q1,nearly sorted 95%,2000,Bubble sort,1998439,100462,248.185
+CSV,q1,nearly sorted 95%,2000,Insertion sort,102461,100462,17.375
+CSV,q1,sorted + batch of 20,2000,Selection sort,1999000,1981,199.588
+CSV,q1,sorted + batch of 20,2000,Bubble sort,1998829,23604,253.063
+CSV,q1,sorted + batch of 20,2000,Insertion sort,25603,23604,5.596
+CSV,q1,few distinct scores,2000,Selection sort,1999000,1584,256.801
+CSV,q1,few distinct scores,2000,Bubble sort,1919200,815745,377.576
+CSV,q1,few distinct scores,2000,Insertion sort,817742,815745,160.748
+CSV,q1,nearly sorted 95%,500,Selection sort,124750,472,0
+CSV,q1,nearly sorted 95%,500,Bubble sort,123970,6394,0
+CSV,q1,nearly sorted 95%,500,Insertion sort,6893,6394,0
+CSV,q1,nearly sorted 95%,1000,Selection sort,499500,977,0
+CSV,q1,nearly sorted 95%,1000,Bubble sort,498939,20940,0
+CSV,q1,nearly sorted 95%,1000,Insertion sort,21939,20940,0
+CSV,q1,nearly sorted 95%,2000,Selection sort,1999000,1992,0
+CSV,q1,nearly sorted 95%,2000,Bubble sort,1995259,85370,0
+CSV,q1,nearly sorted 95%,2000,Insertion sort,87369,85370,0
+CSV,q1,nearly sorted 95%,4000,Selection sort,7998000,3969,0
+CSV,q1,nearly sorted 95%,4000,Bubble sort,7996347,375013,0
+CSV,q1,nearly sorted 95%,4000,Insertion sort,379012,375013,0
+CSV,q1,random,500,Selection sort,124750,489,0
+CSV,q1,random,500,Bubble sort,124344,61223,0
+CSV,q1,random,500,Insertion sort,61717,61223,0
+CSV,q1,random,1000,Selection sort,499500,987,0
+CSV,q1,random,1000,Bubble sort,499490,261091,0
+CSV,q1,random,1000,Insertion sort,262082,261091,0
+CSV,q1,random,2000,Selection sort,1999000,1997,0
+CSV,q1,random,2000,Bubble sort,1997965,992201,0
+CSV,q1,random,2000,Insertion sort,994193,992201,0
+CSV,q1,random,4000,Selection sort,7998000,3990,0
+CSV,q1,random,4000,Bubble sort,7990619,4028152,0
+CSV,q1,random,4000,Insertion sort,4032144,4028152,0

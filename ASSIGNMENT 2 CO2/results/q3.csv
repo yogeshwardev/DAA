@@ -1,0 +1,4 @@
+1 low work: no pattern letter in text,10000,10,9991,9991
+2 engineered worst case,10000,10,99910,99910
+3 log-style text and absent signature,10000,21,10318,10622
+4 DNA-like alphabet (4 letters),10000,11,13304,13254

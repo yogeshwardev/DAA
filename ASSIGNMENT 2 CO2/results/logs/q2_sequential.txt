@@ -1,0 +1,42 @@
+==========================================================================
+Date/Time: 12-10-2026 22:27:38
+Q2 - SEQUENTIAL SEARCH EXPERIMENTS
+==========================================================================
+       n       first      middle        last      absent    mean (1000 hits)
+     100           1          51         100         100                51.5
+    1000           1         501        1000        1000               507.7
+   10000           1        5001       10000       10000              5048.1
+  100000           1       50001      100000      100000             51353.6
+
+measured cost of one comparison in this environment: 128.1 ns
+acceptable response time chosen: 1.0 ms -> unsuccessful search stays acceptable up to n = 7809 records
+
+CHANGED CONDITION (assumed figures): one hangar vs 20 facilities
+scenario                     records    requests/h   avg comps/req  comparisons per hour
+one hangar                       400           300             300                 90000
+20 facilities (one list)        8000          6000            6000              36000000
+one unsuccessful search in the 20-facility list: 8000 comparisons = 1.02 ms
+
+CSV,q2,100,first,1.0
+CSV,q2,100,middle,51.0
+CSV,q2,100,last,100.0
+CSV,q2,100,absent,100.0
+CSV,q2,100,mean of 1000 successful,51.5
+CSV,q2,1000,first,1.0
+CSV,q2,1000,middle,501.0
+CSV,q2,1000,last,1000.0
+CSV,q2,1000,absent,1000.0
+CSV,q2,1000,mean of 1000 successful,507.7
+CSV,q2,10000,first,1.0
+CSV,q2,10000,middle,5001.0
+CSV,q2,10000,last,10000.0
+CSV,q2,10000,absent,10000.0
+CSV,q2,10000,mean of 1000 successful,5048.1
+CSV,q2,100000,first,1.0
+CSV,q2,100000,middle,50001.0
+CSV,q2,100000,last,100000.0
+CSV,q2,100000,absent,100000.0
+CSV,q2,100000,mean of 1000 successful,51353.6
+CSV,q2s,one hangar,400,300,300,90000
+CSV,q2s,20 facilities (one list),8000,6000,6000,36000000
+CSV,q2t,128.1,7809,1.024
