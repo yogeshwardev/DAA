@@ -1,0 +1,18 @@
+======================================================================
+Reg No: 192465067 | Name: N D YOGESHWAR
+Date/Time: 05-10-2026 23:23:40
+TASK 9 - BENCHMARK  n = 1,000 records
+======================================================================
+dataset generated (seed 5067): 1,000 unique records in 0.002s
+queries: 202 (100 found + 100 not found + own reg 192465067 + 192465068)
+
+all three algorithms agree on every query: True
+
+algorithm                   preprocess(s) search tot(s) avg us/query  avg comps max comps
+Linear search                      0.0000        0.0204       100.91      738.7      1000
+Binary search (recursive)          0.0002        0.0013         6.37        9.4        10
+BST search                         0.0022        0.0005         2.35       12.5        21
+
+BST height = 21  (log2 n = 9+)
+
+results saved to results/results.csv

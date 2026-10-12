@@ -1,0 +1,24 @@
+======================================================================
+Reg No: 192465067 | Name: N D YOGESHWAR
+Date/Time: 05-10-2026 23:23:14
+TASK 8 - CORRECTNESS TESTS
+======================================================================
+test case               key    linear  binary     BST  expected  result
+first element            42      True    True    True  True      PASS
+last element             61      True    True    True  True      PASS
+middle value             19      True    True    True  True      PASS
+smallest value            3      True    True    True  True      PASS
+largest value            88      True    True    True  True      PASS
+absent (low)              1     False   False   False  False     PASS
+absent (high)            99     False   False   False  False     PASS
+absent (between)         20     False   False   False  False     PASS
+single element            5      True    True    True  True      PASS
+single element            6     False   False   False  False     PASS
+empty list                5     False   False   False  False     PASS
+empty list                6     False   False   False  False     PASS
+----------------------------------------------------------------------
+n=  1,000: 202 queries, mismatches=0; own reg 192465067 found by (lin,bin,bst)=(True, True, True); reg+1 192465068 found=(False, False, False)  -> PASS
+n= 10,000: 202 queries, mismatches=0; own reg 192465067 found by (lin,bin,bst)=(True, True, True); reg+1 192465068 found=(False, False, False)  -> PASS
+n=100,000: 202 queries, mismatches=0; own reg 192465067 found by (lin,bin,bst)=(True, True, True); reg+1 192465068 found=(False, False, False)  -> PASS
+----------------------------------------------------------------------
+ALL TESTS PASSED

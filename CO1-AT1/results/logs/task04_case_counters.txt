@@ -1,0 +1,24 @@
+======================================================================
+Reg No: 192465067 | Name: N D YOGESHWAR
+Date/Time: 05-10-2026 23:23:18
+TASK 4 - BEST / AVERAGE / WORST CASE COUNTERS  (n = 100,000)
+======================================================================
+
+Linear search (basic op = comparison data[i] == key)
+  best    : key is first element             ->         1 comparison
+  average : successful, random key (mean of 2000) ->  50,576.2  (theory (n+1)/2 = 50,000.5)
+  worst   : key is last element              ->   100,000 comparisons
+  worst   : key not present                  ->   100,000 comparisons
+
+Binary search (basic op = comparison with arr[mid])
+  best    : key sits at the first midpoint   ->         1 comparison
+  average : successful, random key           ->     15.70  (theory ~ log2 n - 1 = 15)
+  worst   : deepest hit / key not present    ->        17 comparisons  (theory floor(log2 n)+1 = 17)
+
+BST search on randomly ordered input (basic op = comparison with node.key)
+  best    : key is the root                  ->         1 comparison
+  average : successful, random key           ->     21.54  (theory ~ 1.39 log2 n = 22.2)
+  worst   : deepest node (tree height)       ->        44 comparisons
+
+BST worst-case demonstration: 2,000 records inserted in SORTED order
+  height = 2,000; searching the last key costs 2,000 comparisons (= n)

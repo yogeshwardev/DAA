@@ -1,0 +1,6 @@
+design,preprocess_s,search_50000_s,us_per_search,daily_update_resort_s,daily_update_merge_s,daily_update_bst_s,daily_update_hash_s
+Linear search (estimated from 200 queries),0.000000,14035.656600,280713.1320,1.063879,0.083272,0.090756,0.000421
+Binary search - original (recursive),1.042441,0.718771,14.3754,1.063879,0.083272,0.090756,0.000421
+Binary search - iterative,1.042441,0.498815,9.9763,1.063879,0.083272,0.090756,0.000421
+BST search,10.217405,0.455847,9.1169,1.063879,0.083272,0.090756,0.000421
+Hash table (set) - revised index,0.270664,0.037285,0.7457,1.063879,0.083272,0.090756,0.000421

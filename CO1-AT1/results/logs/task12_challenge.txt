@@ -1,0 +1,31 @@
+======================================================================
+Reg No: 192465067 | Name: N D YOGESHWAR
+Date/Time: 05-10-2026 23:25:02
+TASK 12 - CHALLENGE: 50,000 searches on 1,000,000 records
+======================================================================
+50,000 queries built (25,000 found, 25,000 not found)
+load: 50,000 per hour = 13.9 searches/second
+
+results agree (found counts): binary=25,000 iterative=25,000 bst=25,000 hash=25,000 expected=25,000
+
+design                                        prep (s)  50k searches (s)  us/search
+Linear search (estimated from 200 queries)      0.0000        14035.6566  280713.13
+Binary search - original (recursive)            1.0424            0.7188      14.38
+Binary search - iterative                       1.0424            0.4988       9.98
+BST search                                     10.2174            0.4558       9.12
+Hash table (set) - revised index                0.2707            0.0373       0.75
+
+Daily update: 1000 new records arrive once per day
+  sorted array: full re-sort            1.0639 s
+  sorted array: merge sorted batch      0.0833 s
+  BST: insert 1,000 records           0.0908 s
+  hash table: insert 1,000 records    0.0004 s
+
+Searches per day at this rate: 1,200,000
+  Linear search (estimated from 200 queries)   total search time for a day = 336855.76 s
+  Binary search - original (recursive)         total search time for a day = 17.25 s
+  Binary search - iterative                    total search time for a day = 11.97 s
+  BST search                                   total search time for a day = 10.94 s
+  Hash table (set) - revised index             total search time for a day = 0.89 s
+
+results saved to results/task12_results.csv

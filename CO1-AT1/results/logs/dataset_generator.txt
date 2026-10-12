@@ -1,0 +1,7 @@
+Reg No: 192465067 | Name: N D YOGESHWAR
+seed = 5067
+wrote data/sample_1000.csv (1000 records)
+n=    1,000  unique=    1,000  own key present=True  own+1 present=False
+n=   10,000  unique=   10,000  own key present=True  own+1 present=False
+n=  100,000  unique=  100,000  own key present=True  own+1 present=False
+n=1,000,000  unique=1,000,000  own key present=True  own+1 present=False
