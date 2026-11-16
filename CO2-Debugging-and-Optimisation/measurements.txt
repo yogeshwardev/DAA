@@ -1,0 +1,20 @@
+﻿
+closest_logins: distance computations (points uniform in 1000 x 1000 km)
+     n    bf n(n-1)    pairs j>i  optimised    ratio    bf sec   opt sec
+  1000       999000       499500        950    1052x      0.47     0.001
+  2000      3998000      1999000       3199    1250x      1.85     0.003
+  4000     15996000      7998000       7026    2277x      6.83     0.005
+  8000     63992000     31996000      15124    4231x     26.74     0.012
+
+sort_alerts: severity comparisons (severity 1..10)
+     n      ins. nearly      ins. random Timsort nearly Timsort random
+  1000             5744           232214           3043           6728
+  2000            31396           917620           5746          13748
+  5000           138905          5637135          10178          35324
+
+find_signature: character comparisons
+  worst case A..AB / A^9B      n=100000 m=10  brute force=999910  KMP=199991
+  random log ACGT / 10 chars   n=100000 m=10  brute force=133415  KMP=125005
+
+is_blocked: blocklist of 2,000 IPs, 5,000 queries (half blocked)
+  linear search comparisons = 7492659   hash-set probes = 5000 (+2000 to build)
