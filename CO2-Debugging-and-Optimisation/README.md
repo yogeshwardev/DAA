@@ -1,4 +1,4 @@
-﻿# CSA06 – CO2 Debugging and Optimisation Task (SentinelOps SOC Alert-Triage Module)
+# CSA06 – CO2 Debugging and Optimisation Task (SentinelOps SOC Alert-Triage Module)
 
 **N D YOGESHWAR – 192465067**
 
